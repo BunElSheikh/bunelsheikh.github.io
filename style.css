@@ -1,0 +1,106 @@
+:root{
+  --bg:#14100c; --bg2:#1c1610; --ink:#efe2c6; --muted:#c3b69b; --dim:#9a8d73;
+  --gold:#c9a15b; --line:rgba(201,161,91,.3);
+  --display:'Aref Ruqaa','Amiri','Noto Naskh Arabic',serif;
+  --body:'Tajawal',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.8}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-left))}
+section{scroll-margin-top:84px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(20,16,12,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
+.brand{font-family:var(--display);font-weight:700;font-size:34px;line-height:1.2}
+nav{display:flex;gap:26px;font-size:18px}
+nav a{color:var(--muted);padding:8px 2px}
+nav a:hover{color:var(--ink)}
+.menu-btn{display:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 34px;border-radius:6px;font-family:inherit;font-size:20px;font-weight:700;cursor:pointer;border:1px solid var(--gold)}
+.btn-gold{background:var(--gold);color:#14100c}
+.btn-gold:hover{background:#d9b676}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:rgba(201,161,91,.12)}
+.eyebrow{font-size:17px;letter-spacing:.06em;color:var(--gold);font-weight:500}
+h1,h2{font-family:var(--display);font-weight:700;margin:0;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(50px,9vw,92px);line-height:1.25}
+h2{font-size:clamp(38px,6vw,58px);line-height:1.3}
+p{margin:0}
+.lead{font-size:clamp(20px,2.6vw,23px);color:var(--muted);max-width:520px}
+.stack{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.frame{border:1px solid rgba(201,161,91,.45);border-radius:6px;overflow:hidden}
+
+/* hero */
+.hero{padding-block:56px 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero .frame{max-width:420px;justify-self:center;width:100%}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+
+/* features */
+.features{background:var(--bg2);border-block:1px solid var(--line)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;padding-block:52px}
+.feat{display:flex;gap:18px;align-items:flex-start}
+.feat svg{flex:none}
+.feat h3{margin:0 0 4px;font-size:23px;font-weight:700}
+.feat p{font-size:18px;color:var(--muted);line-height:1.7}
+
+/* product */
+.product{padding-block:84px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.product .frame{max-width:440px;justify-self:center;width:100%}
+.sizes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;max-width:520px}
+.size{min-height:64px;padding:8px 14px;font-family:inherit;font-size:20px;color:var(--ink);background:transparent;border:1px solid rgba(201,161,91,.55);border-radius:6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.3}
+.size small{font-size:16px;color:var(--muted)}
+.size[aria-pressed="true"]{background:var(--gold);color:#14100c;border-color:var(--gold);font-weight:700}
+.size[aria-pressed="true"] small{color:#14100c}
+.price-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+.price{font-size:40px;font-weight:700;color:var(--gold);line-height:1.2}
+.price span{font-size:22px;font-weight:500}
+.small-note{font-size:16px;color:var(--dim)}
+
+/* story */
+.story{background:var(--bg2);border-block:1px solid var(--line)}
+.story-grid{padding-block:84px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.photos img{width:100%;height:340px;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+
+/* contact */
+.contact{padding-block:84px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact .frame{max-width:420px;justify-self:center;width:100%}
+.phone{direction:ltr;unicode-bidi:plaintext;font-size:30px;font-weight:700;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.label{color:var(--gold);font-size:17px}
+
+footer{border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding-block:28px;color:var(--dim);font-size:16px}
+.foot b{font-family:var(--display);font-size:28px;color:var(--ink);font-weight:700}
+
+/* floating whatsapp bar (phones) */
+.fab{display:none}
+
+@media (max-width:860px){
+  body{font-size:19px}
+  .hero,.product,.story-grid,.contact{grid-template-columns:1fr;gap:36px}
+  .hero{padding-block:36px 52px}
+  .hero .frame{order:2;max-width:340px}
+  .product,.story-grid,.contact{padding-block:56px}
+  .product .frame{order:2;max-width:340px}
+  .contact .frame{max-width:300px}
+  .feat-grid{grid-template-columns:1fr;gap:26px;padding-block:40px}
+  .photos img{height:230px}
+  nav{display:none}
+  nav.open{display:flex;flex-direction:column;gap:0;position:absolute;inset-inline:0;top:68px;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(20px,env(safe-area-inset-right))}
+  nav.open a{padding:14px 0;font-size:21px;border-bottom:1px solid rgba(201,161,91,.15)}
+  nav.open a:last-child{border-bottom:0}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:transparent;border:1px solid var(--line);border-radius:6px;color:var(--ink);cursor:pointer}
+  .cta-row .btn{flex:1 1 100%}
+  .price-row .btn{flex:1 1 100%}
+  .fab{display:flex;position:fixed;inset-inline:0;bottom:0;z-index:30;padding:10px max(16px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));background:rgba(20,16,12,.96);border-top:1px solid var(--line)}
+  .fab .btn{width:100%}
+  body{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
